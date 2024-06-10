@@ -1,0 +1,2 @@
+- npx expo start --android
+- npx expo start --ios
