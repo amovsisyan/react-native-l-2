@@ -1,5 +1,6 @@
 import {Alert, StyleSheet, Text, View} from 'react-native';
 import {useEffect, useState} from "react";
+import {Ionicons} from "@expo/vector-icons";
 import {PrimaryButton} from "../components/PrimaryButton";
 
 const generateRandomNumber = (max, min, exclude) => {
@@ -71,8 +72,12 @@ export const GameScreen = ({ pickedNumber }) => {
         <Text style={styles.guess}>{guess}</Text>
         <Text style={styles.guess}>Is it Higher or Lower ?</Text>
         <View style={styles.buttonsWrapper}>
-            <PrimaryButton onPress={isHigher}>+</PrimaryButton>
-            <PrimaryButton onPress={isLower}>-</PrimaryButton>
+            <PrimaryButton onPress={isHigher}>
+                <Ionicons name="add-circle" size={24} color={"white"} />
+            </PrimaryButton>
+            <PrimaryButton onPress={isLower}>
+                <Ionicons name="remove-circle" size={24} color={"white"} />
+            </PrimaryButton>
         </View>
         {
             logs.length ? <View style={styles.logsWrapper}>

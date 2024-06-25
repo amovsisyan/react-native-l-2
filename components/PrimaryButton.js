@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18,
     },
     text: {
+        fontFamily: 'open-sans',
         color: '#fff',
         fontWeight: "bold",
     },
